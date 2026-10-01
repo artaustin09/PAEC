@@ -1,129 +1,181 @@
-/* RESETEO BÁSICO */
-html, body { 
-    margin: 0; 
-    padding: 0; 
-    width: 100%; 
-    min-height: 100vh; 
-    background-color: rgb(230, 165, 225); 
-    font-family: sans-serif; 
-    display: flex; 
-    flex-direction: column; 
-} 
+/* VARIABLES DE COLOR Y PALETA TEMÁTICA */
+:root {
+    --bg-principal: #f4f7f6;       /* Fondo suave y limpio */
+    --color-encabezado: #2d5a27;    /* Verde naturaleza / esperanza */
+    --color-tarjeta: #ffffff;       /* Blanco puro para destacar el contenido */
+    --color-texto: #333333;         /* Texto oscuro legible */
+    --color-boton: #e67e22;         /* Naranja cálido y llamativo */
+    --color-hover: #d35400;         /* Naranja oscuro para interacciones */
+    --color-activo: #27ae60;        /* Verde para indicar pestaña activa */
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* RESETEO Y CONFIGURACIÓN BÁSICA */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-principal);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+}
 
 /* ENCABEZADO Y NAVEGACIÓN */
-header { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    background-color: rgb(215, 145, 210); 
-    padding: 15px 30px; 
-    box-sizing: border-box; 
-} 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-encabezado);
+    color: #ffffff;
+    padding: 18px 35px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
 
-.logo-pequeno { 
-    width: 50px; 
-    height: auto; 
-    display: block; 
-    border-radius: 4px;
-} 
+header h1 {
+    font-size: 26px;
+    letter-spacing: 0.5px;
+}
 
-.barra-navegacion { 
-    display: flex; 
-    gap: 15px; 
-    margin-top: 10px; 
-}  
+.logo-pequeno {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
 
-.boton-nav { 
-    text-decoration: none; 
-    color: rgb(0, 0, 0); 
-    background-color: rgb(251, 133, 221); 
-    padding: 8px 16px; 
-    border-radius: 4px; 
-    font-size: 14px; 
-    transition: background-color 0.3s, color 0.3s; 
-} 
+.barra-navegacion {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
 
-.boton-nav:hover { 
-    background-color: rgb(215, 100, 190); 
-    color: white; 
-}  
+.boton-nav {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: var(--color-boton);
+    padding: 9px 18px;
+    border-radius: 20px; /* Bordes redondeados y amigables */
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
 
-.boton-nav.activo { 
-    background-color: rgb(180, 80, 160); 
-    color: white; 
-    font-weight: bold; 
-} 
+.boton-nav:hover {
+    background-color: var(--color-hover);
+    transform: translateY(-2px);
+}
+
+.boton-nav.activo {
+    background-color: var(--color-activo);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
 
 /* ESTRUCTURA PRINCIPAL (LAYOUT) */
-main { 
-    display: flex; 
-    gap: 30px; 
-    padding: 30px; 
-    box-sizing: border-box; 
-    flex: 1; 
-    width: 100%; 
-} 
+main {
+    display: flex;
+    gap: 25px;
+    padding: 35px;
+    box-sizing: border-box;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 /* BARRA LATERAL (ASIDE) */
-aside { 
-    width: 25%;  
-    display: flex; 
+aside {
+    width: 28%;
+    display: flex;
     flex-direction: column;
-    align-items: center; 
-    background-color: rgb(238, 170, 235);
-    padding: 15px;
-    border-radius: 6px;
+    align-items: center;
+    background-color: var(--color-tarjeta);
+    padding: 20px;
+    border-radius: 12px;
     box-sizing: border-box;
     height: fit-content;
-} 
+    box-shadow: var(--sombra-suave);
+    border-top: 5px solid var(--color-encabezado);
+}
 
-aside img { 
-    width: 100%; 
-    max-width: 350px; 
-    height: auto; 
-    display: block; 
-    border-radius: 4px; 
-    margin-top: 10px;
-} 
+aside h3 {
+    color: var(--color-encabezado);
+    font-size: 18px;
+}
 
-/* SECCIÓN PRINCIPAL Y ARTÍCULOS */
-section { 
-    width: 75%; 
-    display: flex; 
-    flex-direction: column; 
+aside img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+/* SECCIÓN PRINCIPAL Y TARJETAS */
+section {
+    width: 72%;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-} 
+}
 
-article { 
-    width: 100%; 
-    background-color: rgb(238, 170, 235); 
-    padding: 25px; 
-    border-radius: 6px; 
-    box-sizing: border-box; 
-} 
+article {
+    width: 100%;
+    background-color: var(--color-tarjeta);
+    padding: 28px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: var(--sombra-suave);
+    border-left: 6px solid var(--color-boton);
+}
 
-article img { 
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
-    margin-bottom: 20px; 
-    border-radius: 4px; 
-} 
+article h2 {
+    color: var(--color-encabezado);
+    margin-top: 0;
+}
+
+article h3 {
+    color: var(--color-hover);
+    margin-top: 20px;
+}
+
+article img {
+    max-width: 100%;
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
 
 article ul {
-    line-height: 1.6;
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+article li {
+    margin-bottom: 6px;
 }
 
 /* PIE DE PÁGINA */
-footer { 
-    background-color: rgb(215, 145, 210); 
-    text-align: center; 
-    padding: 15px; 
-    width: 100%; 
-    box-sizing: border-box; 
-} 
+footer {
+    background-color: var(--color-encabezado);
+    color: #ffffff;
+    text-align: center;
+    padding: 18px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
 
-footer p { 
-    margin: 0; 
-    font-size: 14px; 
+footer p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
 }
