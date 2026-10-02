@@ -1,16 +1,14 @@
-/* VARIABLES DE COLOR Y PALETA TEMÁTICA */
 :root {
-    --bg-principal: #f4f7f6;       /* Fondo suave y limpio */
-    --color-encabezado: #2d5a27;    /* Verde naturaleza / esperanza */
-    --color-tarjeta: #ffffff;       /* Blanco puro para destacar el contenido */
-    --color-texto: #333333;         /* Texto oscuro legible */
-    --color-boton: #e67e22;         /* Naranja cálido y llamativo */
-    --color-hover: #d35400;         /* Naranja oscuro para interacciones */
-    --color-activo: #27ae60;        /* Verde para indicar pestaña activa */
+    --bg-principal: #f4f7f6;       
+    --color-encabezado: #2d5a27;    
+    --color-tarjeta: #ffffff;     
+    --color-texto: #333333;      
+    --color-boton: #e67e22;        
+    --color-hover: #d35400;       
+    --color-activo: #27ae60;      
     --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* RESETEO Y CONFIGURACIÓN BÁSICA */
 html, body {
     margin: 0;
     padding: 0;
@@ -23,7 +21,6 @@ html, body {
     flex-direction: column;
 }
 
-/* ENCABEZADO Y NAVEGACIÓN */
 header {
     display: flex;
     justify-content: space-between;
@@ -59,7 +56,7 @@ header h1 {
     color: #ffffff;
     background-color: var(--color-boton);
     padding: 9px 18px;
-    border-radius: 20px; /* Bordes redondeados y amigables */
+    border-radius: 20px;
     font-size: 14px;
     font-weight: bold;
     transition: all 0.3s ease;
@@ -75,7 +72,6 @@ header h1 {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* ESTRUCTURA PRINCIPAL (LAYOUT) */
 main {
     display: flex;
     gap: 25px;
@@ -87,7 +83,6 @@ main {
     margin: 0 auto;
 }
 
-/* BARRA LATERAL (ASIDE) */
 aside {
     width: 28%;
     display: flex;
@@ -116,7 +111,6 @@ aside img {
     margin-top: 12px;
 }
 
-/* SECCIÓN PRINCIPAL Y TARJETAS */
 section {
     width: 72%;
     display: flex;
@@ -163,7 +157,6 @@ article li {
     margin-bottom: 6px;
 }
 
-/* PIE DE PÁGINA */
 footer {
     background-color: var(--color-encabezado);
     color: #ffffff;
