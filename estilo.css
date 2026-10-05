@@ -143,11 +143,11 @@ article img {
     width: 100%;
     height: auto;
     max-height: 450px;
-    object-fit: contain; /* Muestra la imagen completa sin recortar nada */
-    background-color: #f0f0f0; /* Fondo neutro por si quedan espacios */
-    display: block;
+    object-fit: contain;
+    background-color: #ffffff;
     margin-bottom: 20px;
     border-radius: 8px;
+    display: block;
 }
 
 article ul {
