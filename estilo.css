@@ -139,14 +139,14 @@ article h3 {
 }
 
 article img {
-    max-width: 100%;
     width: 100%;
-    height: auto;
-    max-height: 450px;
-    object-fit: contain;
+    height: 350px;
+    object-fit: cover;
+    object-position: top center;
     background-color: #f0f0f0;
     margin-bottom: 20px;
     border-radius: 8px;
+    display: block;
 }
 
 article ul {
